@@ -1,0 +1,25 @@
+.form {
+  &__group:not(:last-child) {
+    
+  }
+
+  &__input {
+    &:focus {
+
+    }
+
+    &:focus:invalid {
+    }
+
+    &::-webkit-input-placeholder {
+
+    }
+  }
+
+  &__label {
+  }
+
+  &__input:placeholder-shown + &__label {
+    
+  }
+}

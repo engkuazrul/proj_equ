@@ -1,0 +1,95 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+  body::-webkit-scrollbar {
+    width: 0 !important; }
+
+body {
+  font-size: 3rem; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-huge {
+  margin-top: 10rem !important; }
+
+.u-margin-bottom-top {
+  margin-top: 8rem !important; }
+
+.footer {
+  background-color: yellowgreen;
+  height: 40rem; }
+
+.header {
+  background-color: orangered;
+  height: 10rem; }
+
+.section-intro {
+  background-color: palevioletred;
+  height: 90rem; }
+
+.section-features {
+  background-color: darkgoldenrod;
+  height: 150rem; }
+
+.section-journey {
+  background-color: blueviolet;
+  height: 70rem; }
+
+.section-about {
+  background-color: saddlebrown;
+  height: 70rem; }
+
+.section-acknowledgement {
+  background-color: darkorange;
+  height: 25rem; }

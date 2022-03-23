@@ -1,0 +1,37 @@
+.popup {
+
+  &:target {
+
+  }
+
+  &:target &__content{
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+    }
+
+    &:hover{
+    }
+  }
+
+  &__content {
+  }
+
+  &__left {
+
+  }
+
+  &__right {
+
+  }
+
+  &__img {
+
+  }
+
+  &__text {
+    
+  }
+}
