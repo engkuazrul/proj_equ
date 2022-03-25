@@ -1,26 +1,21 @@
 .header {
   background-color: #fff;
 
-  height: 11rem;
-  display: flex;
-  align-items: center;
+  min-height: 11rem;
+
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
 
   &__text{    
     &-box {
       display: flex;
-      margin-left: 1.5rem;
-      margin-right: auto;
+      margin: 1rem 0 1rem 1.5rem;
     }
 
     &-title {
-      width: 12rem;
+      width: 11rem;
       font-size: 2rem;
       font-weight: 800;
-    }
-
-    &-border {
-      margin: 0 1rem;
-      background-color: #ccc;
     }
   
     &-desc {
@@ -31,8 +26,25 @@
     &-title,
     &-desc {
       align-self: flex-end;
-      margin: 1rem 0;
+      margin: 0.5rem;
       line-height: 1;
+    }
+  }
+
+  &-border {
+    background-color: #ccc;
+  }
+
+  &__btn{
+    display: flex;
+    align-items: center;
+
+    button{
+      margin: 0 2.5rem;
+    }
+
+    hr {
+      height: 11rem;
     }
   }
 }

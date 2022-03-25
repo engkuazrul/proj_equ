@@ -22,3 +22,13 @@
   background-color: darkorange;
   height: 25rem;
 }
+
+.section-modal {
+  width: 100vw;
+  min-height: calc(100vh - 11rem);
+  background-color: orangered;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}

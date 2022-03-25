@@ -10,43 +10,45 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__text-box">
-      <div class="header__text-title">
-        Western Australian Community Impact Hub
-      </div>
-      <hr class="header__text-border" />
-      <div class="header__text-desc">
-        An initiative of Lotterywest & Healthway
-      </div>
-    </div>
 
-    <ul class="nav">
-      <li class="nav__item nav__item-1">Understand your Community</li>
-      <li class="nav__item nav__item-2">Learn from Others</li>
-      <li class="nav__item nav__item-3">Plan your Project</li>
-    </ul>
-
-    <!-- <form action="#" class="search">
+    <div class="header__btn header__btn-close" style="display: none;">
       <button class="btn-close">
         <svg>
           <use xlink:href="img/sprite.svg#icon-cross"></use>
         </svg>
       </button>
-      
-      <input type="text" class="search__input" placeholder="Search hotels">
+      <hr class="header__border" />
+    </div>
 
-      <button class="btn-search u-margin-right-medium">
+    <div class="header__text-box">
+      <div class="header__text-title">
+        Western Australian Community Impact Hub
+      </div>
+      <hr class="header__border" />
+      <div class="header__text-desc">
+        An initiative of Lotterywest & Healthway
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="nav__item nav__item-1">Understand your Community</div>
+      <div class="nav__item nav__item-2">Learn from Others</div>
+      <div class="nav__item nav__item-3">Plan your Project</div>
+
+      <form action="#" class="search" style="display: none;">
+        <hr class="header__border" />
+        <input type="text" class="search__input" placeholder="Search the Community Impact Hub">
+      </form>
+    </div>
+
+    <div class="header__btn header__btn-search">
+      <button class="btn-search" id="header-search">
         <svg>
           <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
         </svg>
       </button>
-    </form> -->
+    </div>
 
-    <button class="btn-search u-margin-right-medium">
-      <svg>
-        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
-      </svg>
-    </button>
   </header>
 
   <main>
@@ -69,10 +71,53 @@
     <section class="section-acknowledgement">
       Acknowledgement
     </section>
+
+    <section class="section-modal" style="display: none;">
+      Test
+    </section>
   </main>
 
   <footer class="footer">
     Footer
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    //header search icon on click
+    $('#header-search').click(function () {
+      $('.header__btn-close').show();
+      $('.header__text-box').hide();
+
+      $('.nav__item').hide();
+      $('.search').show();
+      
+      $(".nav__item").each(function() { $(this).css('background-color', 'transparent'); });
+      $('.section-modal').show();
+    })
+
+    //header close icon on click
+    $('.header__btn-close').click(function () {
+      $('.header__btn-close').hide();
+      $('.header__text-box').show();
+
+      $('.nav__item').show();
+      $('.search').hide();
+
+      $('.section-modal').hide();
+      $(".nav__item").each(function() { $(this).css('background-color', 'transparent'); });
+    })
+
+    // homepage modal based on nav click
+    $('.nav__item').click(function () {
+      $(".nav__item").each(function() { $(this).css('background-color', 'transparent'); });
+
+      $('.header__btn-close').show();
+      $('.header__text-box').hide();
+
+      $(this).css('background-color', 'red');
+      $('.section-modal').show();
+    })
+  </script>
 </body>
 </html>

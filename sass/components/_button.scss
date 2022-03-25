@@ -38,11 +38,10 @@
 
 .btn-close,
 .btn-search {
-
-  margin: 0 2.5rem;
-
   border: none;
   background-color: transparent;
+
+  cursor: pointer;
 
   &:active {
     transform: translateY(2px);

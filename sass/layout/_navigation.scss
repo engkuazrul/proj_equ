@@ -1,7 +1,6 @@
 .nav {
   align-self: stretch;
-
-  list-style: none;
+  justify-self: end;
   
   display: flex;
   align-items: center;
@@ -11,8 +10,15 @@
   letter-spacing: 0.8px;
 
   &__item{
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    cursor: pointer;
+    
     &:not(:last-child){
-      margin-right: 5rem;
+      padding: 0 5rem;
     }
 
     &:last-child {
