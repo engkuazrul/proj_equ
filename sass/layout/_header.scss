@@ -1,4 +1,38 @@
 .header {
-  background-color: orangered;
-  height: 10rem;
+  background-color: #fff;
+
+  height: 11rem;
+  display: flex;
+  align-items: center;
+
+  &__text{    
+    &-box {
+      display: flex;
+      margin-left: 1.5rem;
+      margin-right: auto;
+    }
+
+    &-title {
+      width: 12rem;
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    &-border {
+      margin: 0 1rem;
+      background-color: #ccc;
+    }
+  
+    &-desc {
+      width: 8rem;  
+      font-size: 1.2rem;
+    }
+
+    &-title,
+    &-desc {
+      align-self: flex-end;
+      margin: 1rem 0;
+      line-height: 1;
+    }
+  }
 }

@@ -46,10 +46,16 @@ body {
     width: 0 !important; }
 
 body {
-  font-size: 3rem; }
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #000; }
 
 .u-center-text {
   text-align: center !important; }
+
+.u-margin-bottom-huge {
+  margin-top: 10rem !important; }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
@@ -60,19 +66,76 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important; }
 
-.u-margin-bottom-huge {
-  margin-top: 10rem !important; }
+.u-margin-left-medium {
+  margin-left: 3rem !important; }
 
-.u-margin-bottom-top {
-  margin-top: 8rem !important; }
+.u-margin-right-medium {
+  margin-right: 3rem !important; }
+
+.btn-close,
+.btn-search {
+  margin: 0 2.5rem;
+  border: none;
+  background-color: transparent; }
+  .btn-close:active,
+  .btn-search:active {
+    transform: translateY(2px); }
+  .btn-close svg,
+  .btn-search svg {
+    height: 2.6rem;
+    width: 2.6rem;
+    fill: #000; }
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+  .search__button {
+    border: none;
+    background-color: transparent; }
+    .search__button:active {
+      transform: translateY(2px); }
 
 .footer {
   background-color: yellowgreen;
   height: 40rem; }
 
 .header {
-  background-color: orangered;
-  height: 10rem; }
+  background-color: #fff;
+  height: 11rem;
+  display: flex;
+  align-items: center; }
+  .header__text-box {
+    display: flex;
+    margin-left: 1.5rem;
+    margin-right: auto; }
+  .header__text-title {
+    width: 12rem;
+    font-size: 2rem;
+    font-weight: 800; }
+  .header__text-border {
+    margin: 0 1rem;
+    background-color: #ccc; }
+  .header__text-desc {
+    width: 8rem;
+    font-size: 1.2rem; }
+  .header__text-title, .header__text-desc {
+    align-self: flex-end;
+    margin: 1rem 0;
+    line-height: 1; }
+
+.nav {
+  align-self: stretch;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.8px; }
+  .nav__item:not(:last-child) {
+    margin-right: 5rem; }
+  .nav__item:last-child {
+    margin-right: 2.5rem; }
 
 .section-intro {
   background-color: palevioletred;
