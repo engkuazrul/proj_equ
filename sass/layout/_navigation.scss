@@ -1,0 +1,22 @@
+.nav {
+  align-self: stretch;
+
+  list-style: none;
+  
+  display: flex;
+  align-items: center;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+
+  &__item{
+    &:not(:last-child){
+      margin-right: 5rem;
+    }
+
+    &:last-child {
+      margin-right: 2.5rem;
+    }
+  }
+}
