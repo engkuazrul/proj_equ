@@ -43,13 +43,29 @@ body {
   scrollbar-width: none;
   /* Firefox */ }
   body::-webkit-scrollbar {
-    width: 0 !important; }
+    width: 0 !important;
+    height: 0 !important; }
 
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1;
   color: #000; }
+
+.heading__1 {
+  font-size: 11rem;
+  line-height: 1; }
+  .heading__1-light {
+    color: #d2cccc; }
+  .heading__1-dark {
+    color: #000; }
+
+.heading__5 {
+  font-size: 2rem; }
+  .heading__5-light {
+    color: #d2cccc; }
+  .heading__5-dark {
+    color: #000; }
 
 .u-center-text {
   text-align: center !important; }
@@ -71,6 +87,28 @@ body {
 
 .u-margin-right-medium {
   margin-right: 3rem !important; }
+
+.bg-video {
+  flex: 0 0 50%;
+  width: 100%;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.4rem;
+  color: #000;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 4px solid currentColor;
+  padding: 3px;
+  transition: all .2s; }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
 
 .btn-close,
 .btn-search {
@@ -109,7 +147,10 @@ body {
 
 .header {
   background-color: #fff;
-  min-height: 11rem;
+  height: 11rem;
+  width: 100vw;
+  position: fixed;
+  z-index: 11;
   display: grid;
   grid-template-columns: max-content 1fr max-content; }
   .header__text-box {
@@ -155,8 +196,25 @@ body {
       margin-right: 2.5rem; }
 
 .section-intro {
-  background-color: palevioletred;
-  height: 90rem; }
+  display: flex;
+  padding-top: 11rem; }
+  .section-intro .intro__text {
+    flex: 1;
+    display: flex;
+    background-image: linear-gradient(rgba(31, 111, 120, 0.8), rgba(31, 111, 120, 0.8)), url("/img/bg.jpg");
+    background-position: center;
+    padding: 16rem 20rem 16rem 16rem; }
+    .section-intro .intro__text-box {
+      display: flex;
+      flex-direction: column; }
+      .section-intro .intro__text-box h1 {
+        margin-left: -1rem; }
+    .section-intro .intro__text-desc {
+      width: 40rem; }
+  .section-intro .intro__button {
+    font-size: 2.3rem;
+    width: fit-content;
+    color: #d2cccc; }
 
 .section-features {
   background-color: darkgoldenrod;
@@ -177,8 +235,8 @@ body {
 .section-modal {
   width: 100vw;
   min-height: calc(100vh - 11rem);
-  background-color: orangered;
-  position: absolute;
+  background-color: blue;
+  position: fixed;
   bottom: 0;
   left: 0;
   z-index: 10; }

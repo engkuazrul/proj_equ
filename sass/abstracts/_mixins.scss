@@ -7,7 +7,8 @@
 
 @mixin hideScrollbar {
   &::-webkit-scrollbar {
-    width: 0 !important
+    width: 0 !important;
+    height: 0 !important;
   }
   
   -ms-overflow-style: none;  /* IE and Edge */

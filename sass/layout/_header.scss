@@ -1,7 +1,10 @@
 .header {
   background-color: #fff;
 
-  min-height: 11rem;
+  height: 11rem;
+  width: 100vw;
+  position: fixed;
+  z-index: 11;
 
   display: grid;
   grid-template-columns: max-content 1fr max-content;
