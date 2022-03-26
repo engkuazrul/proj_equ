@@ -22,24 +22,31 @@
 }
 
 .btn-text {
+  position: relative;
+
   &:link,
   &:visited {
+    width: fit-content;
     font-size: 1.4rem;
     color: #000;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 4px solid currentColor;
     padding: 3px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: currentColor;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -1rem;
     transition: all .2s;
   }
 
-  &:hover{
-    
-  }
-
-  &:active {
-    box-shadow: 0 .5rem 1rem rgba(#000, .15);
-    transform: translateY(0);
+  &:hover::after{
+    width: 100%;
   }
 }
 
