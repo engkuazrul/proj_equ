@@ -1,17 +1,30 @@
 .composition {
-  &__photo {
+  position: relative;
 
+  &__photo {
+    width: 55%;
+    object-fit: cover;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    border-radius: 2px;
+    position: absolute;
 
     &--p1{
-
+      height: 80%;
+      width: 90%;
+      top: 0;
+      left: 0;
     }
 
     &--p2{
-
+      top: 0;
+      left: 8rem;
     }
 
     &--p3{
-
+      min-height: 32rem;
+      width: 45%;
+      top: 9rem;
+      right: 0;
     }
 
     &:hover{

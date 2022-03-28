@@ -1,0 +1,21 @@
+.loading {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(#3498db, .4);
+  z-index: 9998;
+
+  &__icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    animation: spin 2s linear infinite;
+    z-index: 9999;
+  }
+}

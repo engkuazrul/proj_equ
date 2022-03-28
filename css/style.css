@@ -46,13 +46,18 @@
   100% {
     opacity: 0; } }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-  transition: all ease-in-out 250ms; }
+  box-sizing: inherit; }
 
 html {
   font-size: 62.5%; }
@@ -96,11 +101,8 @@ body {
   margin-right: 3rem !important; }
 
 .bg-video {
-  flex: 0 0 50%;
   width: 100%;
-  overflow: hidden;
-  animation-name: moveInLeft;
-  animation-duration: 1s; }
+  overflow: hidden; }
   .bg-video__content {
     height: 100%;
     width: 100%;
@@ -141,7 +143,49 @@ body {
     width: 2.6rem;
     fill: #000; }
 
-.parallax-bg {
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    object-fit: cover;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute; }
+    .composition__photo--p1 {
+      height: 80%;
+      width: 90%;
+      top: 0;
+      left: 0; }
+    .composition__photo--p2 {
+      top: 0;
+      left: 8rem; }
+    .composition__photo--p3 {
+      min-height: 32rem;
+      width: 45%;
+      top: 9rem;
+      right: 0; }
+
+.loading {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(52, 152, 219, 0.4);
+  z-index: 9998; }
+  .loading__icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    animation: spin 2s linear infinite;
+    z-index: 9999; }
+
+.parallax-bg,
+.parallax-box {
   transition: initial; }
 
 .search {
@@ -218,25 +262,25 @@ body {
 .section-intro {
   display: flex;
   padding-top: 11rem;
-  background-color: #1f6f78;
+  background-color: #56b2bd;
   background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
   background-position: center; }
+  .section-intro .bg-video {
+    flex: 1; }
   .section-intro .intro {
-    flex: 1;
+    flex: 0 0 50%;
     display: flex;
     padding: 14rem;
     color: #fff; }
     .section-intro .intro__text-box {
       display: flex;
       flex-direction: column;
-      max-width: 48rem;
-      animation-name: fadeIn;
-      animation-duration: 1s; }
+      max-width: 48rem; }
     .section-intro .intro__heading {
       margin-left: -1rem;
       margin-bottom: 4rem;
       font-size: 10.4rem;
-      line-height: 1; }
+      font-weight: 700; }
     .section-intro .intro__desc {
       margin-bottom: 4rem;
       font-size: 2.2rem;
@@ -249,8 +293,45 @@ body {
       color: inherit; }
 
 .section-features {
-  background-color: darkgoldenrod;
-  height: 150rem; }
+  padding: 18rem 24rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1eeea; }
+  .section-features .features {
+    display: flex; }
+    .section-features .features__text-box {
+      flex: 0 0 50%;
+      display: flex;
+      flex-direction: column; }
+      .section-features .features__text-box--1 {
+        padding-right: 10rem; }
+      .section-features .features__text-box--2 {
+        padding: 8rem 0 12rem 10rem; }
+    .section-features .features__highlight {
+      color: #944801;
+      font-size: 2rem;
+      margin-bottom: 2rem; }
+    .section-features .features__heading-primary {
+      font-size: 6rem; }
+    .section-features .features__heading-secondary {
+      font-size: 3.8rem; }
+    .section-features .features__heading-primary, .section-features .features__heading-secondary {
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      line-height: 1.2;
+      font-weight: 600;
+      margin-bottom: 3rem; }
+    .section-features .features__paragraph {
+      color: #583506;
+      font-size: 2.2rem;
+      font-weight: 400;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      line-height: 1.2; }
+    .section-features .features .composition {
+      flex: 1; }
+    .section-features .features:not(:last-child) {
+      margin-bottom: 18rem; }
 
 .section-journey {
   background-color: blueviolet;
