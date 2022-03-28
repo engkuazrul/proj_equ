@@ -51,7 +51,7 @@
   </header>
 
   <main>
-    <section class="section-intro">
+    <section class="section-intro parallax-bg">
       <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
           <source src="img/video.mp4" type="video/mp4">
@@ -132,6 +132,16 @@
       $(this).css('background-color', 'red');
       $('.section-modal').show();
     })
+
+    // parallax
+    $(window).scroll(function() {
+      parallax();
+    });
+
+    const parallax = () => {
+      const windowScroll = $(window).scrollTop();
+      $('.parallax-bg').css('background-position', 'center '+(windowScroll*0.75)+'px');
+    };
   </script>
 </body>
 </html>

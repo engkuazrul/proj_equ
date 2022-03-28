@@ -2,6 +2,8 @@
   flex: 0 0 50%;
   width: 100%;
   overflow: hidden;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
 
   &__content {
     height: 100%;
