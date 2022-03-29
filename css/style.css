@@ -52,6 +52,10 @@
   100% {
     transform: rotate(360deg); } }
 
+@keyframes drawIcon {
+  to {
+    stroke-dashoffset: 0; } }
+
 *,
 *::after,
 *::before {
@@ -143,6 +147,34 @@ body {
     width: 2.6rem;
     fill: #000; }
 
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18rem;
+  padding: 4rem 10rem;
+  background: #f1f0f0;
+  box-shadow: 0 0.4rem 0.5rem rgba(51, 51, 51, 0.4);
+  border-radius: 2px; }
+  .category__icon {
+    height: 10rem;
+    width: 10rem; }
+  .category__heading {
+    margin-top: 2rem;
+    color: #2f2f2f;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 1.2; }
+
+[data-aos="icon-draw"] {
+  stroke-dasharray: 4700;
+  stroke-dashoffset: 4700; }
+  [data-aos="icon-draw"].aos-animate {
+    stroke-dashoffset: 0; }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -160,7 +192,7 @@ body {
       top: 0;
       left: 8rem; }
     .composition__photo--p3 {
-      min-height: 32rem;
+      height: 32rem;
       width: 45%;
       top: 9rem;
       right: 0; }
@@ -316,6 +348,7 @@ body {
     .section-features .features__heading-secondary {
       font-size: 3.8rem; }
     .section-features .features__heading-primary, .section-features .features__heading-secondary {
+      color: #4e4b4b;
       word-spacing: 2px;
       letter-spacing: 1px;
       line-height: 1.2;
@@ -330,6 +363,25 @@ body {
       line-height: 1.2; }
     .section-features .features .composition {
       flex: 1; }
+    .section-features .features__category {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 8rem; }
+      .section-features .features__category-2 {
+        margin-top: -8rem; }
+      .section-features .features__category-4 {
+        margin-top: -4rem; }
+      .section-features .features__category-5 {
+        margin-top: -6rem; }
+      .section-features .features__category > *:not(:last-child) {
+        margin-right: 2rem; }
+      .section-features .features__category-box {
+        transition: all .45s; }
+        .section-features .features__category-box .category:hover {
+          background: #be6c0d !important; }
+        .section-features .features__category-box:hover {
+          transform: translateY(-3rem); }
     .section-features .features:not(:last-child) {
       margin-bottom: 18rem; }
 

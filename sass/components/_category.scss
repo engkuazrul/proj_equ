@@ -1,0 +1,38 @@
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 18rem;
+
+  padding: 4rem 10rem;
+
+  background: #f1f0f0;
+  box-shadow: 0 .4rem .5rem rgba(#333, .4);
+  border-radius: 2px;
+
+  &__icon {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  &__heading {
+    margin-top: 2rem;
+    color: #2f2f2f;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+}
+
+[data-aos="icon-draw"] {
+  stroke-dasharray: 4700;
+  stroke-dashoffset: 4700;
+  &.aos-animate {
+    stroke-dashoffset: 0;
+  }
+}

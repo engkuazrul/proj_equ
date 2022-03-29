@@ -91,6 +91,7 @@
 
       &-primary,
       &-secondary {
+        color: #4e4b4b;
         word-spacing: 2px;
         letter-spacing: 1px;
         line-height: 1.2;
@@ -110,6 +111,42 @@
 
     .composition {
       flex: 1;
+    }
+
+    &__category {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 8rem;
+
+      &-2 {
+        margin-top: -8rem;
+      }
+
+      &-4{
+        margin-top: -4rem;
+      }
+
+      &-5{
+        margin-top: -6rem;
+      }
+
+      > *:not(:last-child){
+        margin-right: 2rem;
+      }
+
+      &-box {
+        transition: all .45s;
+
+        .category:hover {
+          background: #be6c0d !important;
+        }
+
+
+        &:hover {
+          transform: translateY(-3rem);
+        }
+      }
     }
 
     &:not(:last-child){

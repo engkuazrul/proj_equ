@@ -84,3 +84,10 @@
      transform: rotate(360deg); 
   }
 }
+
+
+@keyframes drawIcon {
+  to {
+     stroke-dashoffset: 0;
+  }
+}
